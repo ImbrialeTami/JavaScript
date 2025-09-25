@@ -25,37 +25,47 @@ if (objetivo == "disminucion grasa") {
 
 
 
+
+
 let total = 0;
 let eleccion;
+
 do {
-    eleccion = prompt (
-        "Bienvenido a nuestra página de entrenamiento. Elija su objetivo: \n1. Aumento masa muscular. \n2. Disminucion de grasa corporal \n3. Mayor resistencia \n4. Salir"
-    );
-switch (eleccion) {
-    case "1":
-        total = total + $15000;
-        console.log("Su total es de $15.000");
-    break;
+    eleccion = parseInt(prompt(
+        "Bienvenido a nuestra página de entrenamiento. Elija su objetivo: \n1. Aumento masa muscular. \n2. Disminución de grasa corporal \n3. Mayor resistencia \n4. Salir"
+    ));
 
-    case "2":
-        total = total + $18000;
-        console.log("Su total es de $18.000");
-    break;
+    switch (eleccion) {
+        case 1:
+            total += 15000;
+            console.log("Agregaste Aumento de masa muscular (+$15.000).");
+            console.log("Tu total acumulado es de $" + total);
+            break;
 
-    case "3":
-        total = total + $12000;
-        console.log("Su total es de $12.000");
-    break;
+        case 2:
+            total += 18000;
+            console.log("Agregaste Disminución de grasa corporal (+$18.000).");
+            console.log("Tu total acumulado es de $" + total);
+            break;
 
-        case "4":
-        console.log("Gracias por su visita!");
-    break;
+        case 3:
+            total += 12000;
+            console.log("Agregaste Mayor resistencia (+$12.000).");
+            console.log("Tu total acumulado es de $" + total);
+            break;
 
-    default:
-    console.log("El numero ingresado no es valido");
-        break;
-}
-} while (eleccion !== "4");
+        case 4:
+            console.log("Gracias por su visita!");
+            console.log("El total final de tu plan es de $" + total);
+            break;
+
+        default:
+            console.log("El número ingresado no es válido");
+            break;
+    }
+
+} while (eleccion !== 4);
+
 
 
 alert = alert ("Vuelve pronto");   
